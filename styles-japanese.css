@@ -1162,9 +1162,13 @@ section {
 }
 
 .lightbox-content {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 95%;
+    max-height: 95%;
+    width: auto;
+    height: auto;
     object-fit: contain;
+    background: white;
+    padding: 10px;
     border-radius: 8px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     animation: zoomIn 0.3s ease;
