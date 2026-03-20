@@ -706,6 +706,128 @@ section {
 }
 
 /* ===================================
+   Menu Section
+   =================================== */
+.menu-section {
+    padding: 60px 0;
+}
+
+.menu-vertical {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.menu-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    background: var(--white);
+    padding: 25px 30px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--accent-gold);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.item-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--accent-brown);
+    font-family: 'Zen Old Mincho', serif;
+}
+
+.item-price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--accent-red);
+}
+
+.menu-item-desc {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.menu-note-section {
+    margin-top: 40px;
+    padding: 25px;
+    background: rgba(192, 57, 43, 0.05);
+    border-radius: 5px;
+    border-left: 4px solid var(--accent-red);
+}
+
+.menu-note-section .menu-note {
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.menu-link {
+    color: var(--accent-brown);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.menu-link:hover {
+    color: var(--accent-red);
+}
+
+.menu-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-red);
+    transition: width 0.3s ease;
+}
+
+.menu-link:hover::after {
+    width: 100%;
+}
+
+.back-link {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: var(--accent-gold);
+    color: var(--text-primary);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.back-btn:hover {
+    background: #C4A030;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* ===================================
    Footer
    =================================== */
 .footer {
