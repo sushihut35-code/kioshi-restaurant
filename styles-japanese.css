@@ -1069,3 +1069,28 @@ section {
     color: var(--text-secondary);
     font-size: 0.95rem;
 }
+
+/* ===================================
+   Menu Table Image
+   =================================== */
+.menu-image-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.menu-image-title {
+    font-size: 1.4rem;
+    color: var(--accent-red);
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.menu-table-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 25px rgba(45, 45, 45, 0.2);
+    border: 3px solid var(--accent-gold);
+    display: block;
+    margin: 0 auto;
+}
