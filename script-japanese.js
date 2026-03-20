@@ -11,6 +11,33 @@ if (header) {
     });
 }
 
+// Hamburger Menu Toggle
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('nav');
+
+if (hamburger && nav) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        nav.classList.toggle('active');
+    });
+
+    // Close menu when clicking a nav link
+    nav.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            nav.classList.remove('active');
+        });
+    });
+}
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (hamburger && nav && !nav.contains(e.target) && !hamburger.contains(e.target)) {
+        hamburger.classList.remove('active');
+        nav.classList.remove('active');
+    }
+});
+
 // Smooth Scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
