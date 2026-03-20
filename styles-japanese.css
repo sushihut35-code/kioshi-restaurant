@@ -563,10 +563,47 @@ section {
     border-radius: 5px;
     overflow: hidden;
     box-shadow: var(--shadow);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-embed-link:hover .map-embed {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
 }
 
 .map-embed iframe {
     display: block;
+    pointer-events: none;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.map-embed-link:hover .map-overlay {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.map-overlay-text {
+    background: white;
+    color: var(--accent-brown);
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Zen Old Mincho', serif;
 }
 
 .btn-text {

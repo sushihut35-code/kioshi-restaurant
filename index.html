@@ -208,18 +208,23 @@
                     <span class="btn-text">📍 Googleマップで開く</span>
                 </a>
 
-                <!-- 埋め込みGoogleマップ -->
-                <div class="map-embed">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3332.123456789!2d131.5724!3d31.8856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDUzJzA4LjIiTiAxMzHCsDM0JzIwLjYiRQ!5e0!3m2!1sja!2sjp!4v1710000000000!5m2!1sja!2sjp"
-                        width="100%"
-                        height="400"
-                        style="border:0; border-radius: 5px;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
+                <!-- クリックでナビゲーションが始まる地図 -->
+                <a href="https://www.google.com/maps/dir/?api=1&destination=宮崎県東臼杵郡門川町南町3-21" target="_blank" rel="noopener noreferrer" class="map-embed-link">
+                    <div class="map-embed">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3332.123456789!2d131.5724!3d31.8856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDUzJzA4LjIiTiAxMzHCsDM0JzIwLjYiRQ!5e0!3m2!1sja!2sjp!4v1710000000000!5m2!1sja!2sjp"
+                            width="100%"
+                            height="400"
+                            style="border:0; border-radius: 5px; pointer-events: none;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="map-overlay">
+                            <span class="map-overlay-text">📍 クリックしてナビゲーション開始</span>
+                        </div>
+                    </div>
+                </a>
             </div>
         </section>
 
