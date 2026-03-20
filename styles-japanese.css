@@ -1093,4 +1093,9 @@ section {
     border: 3px solid var(--accent-gold);
     display: block;
     margin: 0 auto;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    max-width: 800px;
+    width: 100%;
 }
