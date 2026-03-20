@@ -89,42 +89,24 @@ body {
     color: white;
     text-decoration: none;
     font-size: 1rem;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     position: relative;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-.nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-    position: relative;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    padding: 8px 16px;
+    background: rgba(212, 175, 55, 0.8);
+    border-radius: 5px;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .header.scrolled .nav a {
-    color: var(--text-primary);
-    text-shadow: none;
-}
-
-.nav a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--gold);
-    transition: width 0.3s ease;
+    color: white;
+    background: var(--accent-gold);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .nav a:hover {
-    color: var(--gold);
-}
-
-.nav a:hover::after {
-    width: 100%;
+    background: var(--accent-red);
+    transform: translateY(-2px);
 }
 
 /* ===================================
@@ -774,6 +756,20 @@ section {
 .menu-note-section .menu-note {
     margin-bottom: 10px;
     color: var(--text-primary);
+}
+
+.menu-category {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.category-title {
+    font-size: 1.5rem;
+    color: var(--accent-brown);
+    font-family: 'Zen Old Mincho', serif;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent-gold);
 }
 
 .menu-link {
