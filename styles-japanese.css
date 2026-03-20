@@ -1020,7 +1020,7 @@ section {
 }
 
 .instagram-link {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
@@ -1032,6 +1032,8 @@ section {
     font-weight: 600;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 15px rgba(220, 39, 67, 0.3);
+    margin: 0 auto;
+    width: fit-content;
 }
 
 .instagram-link:hover {
