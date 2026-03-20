@@ -282,7 +282,6 @@ section {
 }
 
 .concept,
-.homecoming,
 .signature,
 .history,
 .gallery,
@@ -327,32 +326,6 @@ section {
     color: var(--text-secondary);
     margin-bottom: 25px;
     text-align: justify;
-}
-
-/* ===================================
-   Homecoming Section
-   =================================== */
-.homecoming {
-    background: linear-gradient(135deg, rgba(192, 57, 43, 0.03) 0%, rgba(139, 69, 19, 0.03) 100%);
-}
-
-.homecoming-content {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.homecoming-text {
-    font-size: 1.15rem;
-    line-height: 2.2;
-    margin-bottom: 25px;
-    color: var(--text-primary);
-}
-
-.homecoming-text:last-child {
-    margin-bottom: 0;
-    font-weight: 500;
-    color: var(--accent-brown);
 }
 
 /* ===================================
