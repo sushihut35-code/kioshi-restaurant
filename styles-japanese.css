@@ -585,6 +585,17 @@ section {
     box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
 }
 
+.map-embed {
+    margin-top: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.map-embed iframe {
+    display: block;
+}
+
 .btn-text {
     display: block;
     font-size: 1.1rem;
