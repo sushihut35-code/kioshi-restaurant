@@ -426,6 +426,24 @@ section {
     text-align: center;
 }
 
+.menu-image {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.menu-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-image img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
 .menu-others {
     background: var(--white);
     padding: 30px;
