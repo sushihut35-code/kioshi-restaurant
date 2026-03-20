@@ -1097,3 +1097,107 @@ section {
     image-rendering: -webkit-optimize-contrast;
     quality: high;
 }
+
+/* メニュー画像コンテナ */
+.menu-images-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.menu-images-container .menu-table-image {
+    max-width: 45%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-images-container .menu-table-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 30px rgba(45, 45, 45, 0.3);
+}
+
+.menu-images-container .menu-table-image.clickable {
+    position: relative;
+}
+
+.menu-images-container .menu-table-image.clickable::after {
+    content: '🔍';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(212, 175, 55, 0.9);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-images-container .menu-table-image.clickable:hover::after {
+    opacity: 1;
+}
+
+/* ライトボックス（モーダル） */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 1001;
+}
+
+.lightbox-close:hover {
+    color: var(--accent-gold);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
