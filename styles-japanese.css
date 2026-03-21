@@ -1163,7 +1163,7 @@ section {
 .lightbox-content {
     display: block;
     max-width: 90%;
-    max-height: none;
+    max-height: 85vh;
     width: auto;
     height: auto;
     object-fit: contain;
@@ -1172,7 +1172,7 @@ section {
     border-radius: 8px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     animation: zoomIn 0.3s ease;
-    margin: 40px auto;
+    margin: 40px auto 80px auto;
 }
 
 .lightbox-close {
