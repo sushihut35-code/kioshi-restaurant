@@ -1169,11 +1169,11 @@ body.lightbox-open .header {
 }
 
 /* メニュー4専用ライトボックス */
-.lightbox4 {
-    padding: 50px 20px !important;
+#lightbox4 {
+    padding: 50px 20px;
 }
 
-.lightbox4.show {
+#lightbox4.show {
     display: block;
 }
 
