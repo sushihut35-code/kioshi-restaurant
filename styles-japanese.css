@@ -1153,7 +1153,7 @@ section {
     overflow-x: hidden;
     background-color: rgba(0, 0, 0, 0.95);
     animation: fadeIn 0.3s ease;
-    padding: 150px 20px 20px 20px;
+    padding: 10px;
     box-sizing: border-box;
     -webkit-overflow-scrolling: touch;
     text-align: center;
@@ -1165,15 +1165,6 @@ body.lightbox-open .header {
 }
 
 .lightbox.show {
-    display: block;
-}
-
-/* メニュー4用ライトボックス */
-#lightbox4 {
-    padding: 20px !important;
-}
-
-#lightbox4.show {
     display: block;
 }
 
