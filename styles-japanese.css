@@ -1167,8 +1167,8 @@ body.lightbox-open .header {
 
 .lightbox-content {
     display: block;
-    max-width: 800px;
-    max-height: 80vh;
+    max-width: 95%;
+    max-height: none;
     width: auto;
     height: auto;
     object-fit: contain;
@@ -1177,7 +1177,7 @@ body.lightbox-open .header {
     border-radius: 8px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     animation: zoomIn 0.3s ease;
-    margin: 20px auto;
+    margin: 20px auto 100px auto;
 }
 
 .lightbox-close {
