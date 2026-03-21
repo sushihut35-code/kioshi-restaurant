@@ -1153,7 +1153,7 @@ section {
     overflow-x: hidden !important;
     background-color: rgba(0, 0, 0, 0.95) !important;
     animation: fadeIn 0.3s ease;
-    padding: 20px !important;
+    padding: 0 !important;
     box-sizing: border-box !important;
     -webkit-overflow-scrolling: touch !important;
     text-align: center !important;
