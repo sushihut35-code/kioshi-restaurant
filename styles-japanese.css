@@ -1156,6 +1156,8 @@ section {
     padding: 20px;
     box-sizing: border-box;
     -webkit-overflow-scrolling: touch;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 /* ライトボックスが開いているときはヘッダーを非表示 */
@@ -1164,7 +1166,7 @@ body.lightbox-open .header {
 }
 
 .lightbox.show {
-    display: block;
+    display: flex;
 }
 
 .lightbox-content {
@@ -1179,7 +1181,7 @@ body.lightbox-open .header {
     border-radius: 8px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     animation: zoomIn 0.3s ease;
-    margin: 0 auto 150px auto;
+    margin: 20px auto;
 }
 
 .lightbox-close {
