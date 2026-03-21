@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>定食メニュー | 旬食工房きよし</title>
     <meta name="description" content="旬食工房きよしの定食メニュー一覧。ご飯、味噌汁、おかずがついたお得な定食をご用意しています。">
-    <link rel="stylesheet" href="styles-japanese.css?v=41">
+    <link rel="stylesheet" href="styles-japanese.css?v=42">
     <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -87,17 +87,30 @@
         // ライトボックス機能
         function openLightbox(event, img) {
             event.preventDefault();
+            console.log('openLightbox called');
+            console.log('img element:', img);
+            console.log('img classes:', img.className);
+            console.log('has menu4-img:', img.classList.contains('menu4-img'));
+
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
+            console.log('lightbox element:', lightbox);
+            console.log('lightboxImg element:', lightboxImg);
+
             lightboxImg.src = img.src;
+            console.log('set img src to:', img.src);
+
             lightbox.classList.add('show');
+            console.log('added show class');
             document.body.classList.add('lightbox-open');
             document.body.style.overflow = 'hidden';
 
             // メニュー4の場合はパディングを調整
             if (img.classList.contains('menu4-img')) {
+                console.log('This is menu4, setting padding to 50px');
                 lightbox.style.padding = '50px 20px';
             } else {
+                console.log('This is not menu4, setting padding to 150px');
                 lightbox.style.padding = '150px 20px 20px 20px';
             }
 
