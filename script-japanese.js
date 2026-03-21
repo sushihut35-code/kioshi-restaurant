@@ -38,7 +38,7 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// Smooth Scrolling
+// Smooth Scrolling - Only for anchor links within the same page
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -54,6 +54,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth'
             });
         }
+    });
+});
+
+// Ensure external page links work normally
+document.querySelectorAll('a[href^="menu-"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+        // Let the default behavior work for external page links
+        console.log('Navigating to:', this.getAttribute('href'));
     });
 });
 
