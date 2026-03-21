@@ -1150,10 +1150,15 @@ section {
     height: 100%;
     overflow-y: auto;
     overflow-x: hidden;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.95);
     animation: fadeIn 0.3s ease;
     padding: 20px;
     box-sizing: border-box;
+}
+
+/* ライトボックスが開いているときはヘッダーを非表示 */
+body.lightbox-open .header {
+    display: none;
 }
 
 .lightbox.show {
