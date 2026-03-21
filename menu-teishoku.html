@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>定食メニュー | 旬食工房きよし</title>
     <meta name="description" content="旬食工房きよしの定食メニュー一覧。ご飯、味噌汁、おかずがついたお得な定食をご用意しています。">
-    <link rel="stylesheet" href="styles-japanese.css?v=52">
+    <link rel="stylesheet" href="styles-japanese.css?v=53">
     <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -89,29 +89,10 @@
             event.preventDefault();
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
-
             lightboxImg.src = img.src;
-
-            // 画像の縦横比をチェック
-            const tempImg = new Image();
-            tempImg.src = img.src;
-            tempImg.onload = function() {
-                const aspectRatio = tempImg.height / tempImg.width;
-                console.log('Image aspect ratio:', aspectRatio);
-
-                // 縦長の画像（縦横比が1.5より大きい）はパディングを小さく
-                if (aspectRatio > 1.5) {
-                    console.log('Portrait image detected, using small padding');
-                    lightbox.style.padding = '5px';
-                } else {
-                    console.log('Landscape image detected, using normal padding');
-                    lightbox.style.padding = '10px';
-                }
-
-                lightbox.classList.add('show');
-                document.body.classList.add('lightbox-open');
-                document.body.style.overflow = 'hidden';
-            };
+            lightbox.classList.add('show');
+            document.body.classList.add('lightbox-open');
+            document.body.style.overflow = 'hidden';
         }
 
         function closeLightbox() {

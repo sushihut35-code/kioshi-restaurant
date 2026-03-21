@@ -1153,10 +1153,9 @@ section {
     overflow-x: hidden;
     background-color: rgba(0, 0, 0, 0.95);
     animation: fadeIn 0.3s ease;
-    padding: 10px;
+    padding: 20px;
     box-sizing: border-box;
     -webkit-overflow-scrolling: touch;
-    text-align: center;
 }
 
 /* ライトボックスが開いているときはヘッダーを非表示 */
@@ -1165,13 +1164,16 @@ body.lightbox-open .header {
 }
 
 .lightbox.show {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .lightbox-content {
-    display: inline-block;
+    display: block;
     max-width: 95%;
-    max-height: none;
+    max-height: 90vh;
     width: auto;
     height: auto;
     object-fit: contain;
