@@ -1152,7 +1152,7 @@ section {
     overflow-x: hidden;
     background-color: rgba(0, 0, 0, 0.95);
     animation: fadeIn 0.3s ease;
-    padding: 20px;
+    padding: 40px 20px 150px 20px;
     box-sizing: border-box;
 }
 
