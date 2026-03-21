@@ -1152,7 +1152,7 @@ section {
     overflow-x: hidden;
     background-color: rgba(0, 0, 0, 0.95);
     animation: fadeIn 0.3s ease;
-    padding: 100px 20px 200px 20px;
+    padding: 150px 20px 250px 20px;
     box-sizing: border-box;
 }
 
@@ -1177,7 +1177,7 @@ body.lightbox-open .header {
     border-radius: 8px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     animation: zoomIn 0.3s ease;
-    margin: 20px auto 100px auto;
+    margin: 0 auto 150px auto;
 }
 
 .lightbox-close {
