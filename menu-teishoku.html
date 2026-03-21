@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>定食メニュー | 旬食工房きよし</title>
     <meta name="description" content="旬食工房きよしの定食メニュー一覧。ご飯、味噌汁、おかずがついたお得な定食をご用意しています。">
-    <link rel="stylesheet" href="styles-japanese.css?v=40">
+    <link rel="stylesheet" href="styles-japanese.css?v=41">
     <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -52,20 +52,14 @@
                     <div class="menu-images-container">
                         <img src="images/メニュー1.png" alt="旬食工房きよし 定食メニュー表" class="menu-table-image clickable" onclick="openLightbox(event, this)">
                         <img src="images/メニュー2.png" alt="旬食工房きよし 定食メニュー表（続き）" class="menu-table-image clickable" onclick="openLightbox(event, this)">
-                        <img src="images/メニュー4.jpg" alt="旬食工房きよし 定食メニュー表（続き2）" class="menu-table-image clickable" onclick="openLightbox4(event, this)">
+                        <img src="images/メニュー4.jpg" alt="旬食工房きよし 定食メニュー表（続き2）" class="menu-table-image clickable menu4-img" onclick="openLightbox(event, this)">
                     </div>
                 </div>
 
-                <!-- ライトボックス（モーダル） - メニュー1・2用 -->
+                <!-- ライトボックス（モーダル） -->
                 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
                     <span class="lightbox-close">&times;</span>
                     <img class="lightbox-content" id="lightbox-img">
-                </div>
-
-                <!-- ライトボックス（モーダル） - メニュー4用 -->
-                <div id="lightbox4" class="lightbox lightbox4" onclick="closeLightbox4()">
-                    <span class="lightbox-close">&times;</span>
-                    <img class="lightbox-content" id="lightbox-img4">
                 </div>
 
                 <div class="menu-note-section">
@@ -90,7 +84,7 @@
 
     <script src="script-japanese.js?v=4"></script>
     <script>
-        // ライトボックス機能（メニュー1・2用）
+        // ライトボックス機能
         function openLightbox(event, img) {
             event.preventDefault();
             const lightbox = document.getElementById('lightbox');
@@ -99,6 +93,13 @@
             lightbox.classList.add('show');
             document.body.classList.add('lightbox-open');
             document.body.style.overflow = 'hidden';
+
+            // メニュー4の場合はパディングを調整
+            if (img.classList.contains('menu4-img')) {
+                lightbox.style.padding = '50px 20px';
+            } else {
+                lightbox.style.padding = '150px 20px 20px 20px';
+            }
 
             // ライトボックスのアニメーション完了後にスクロールをリセット
             setTimeout(() => {
@@ -113,33 +114,10 @@
             document.body.style.overflow = 'auto';
         }
 
-        // ライトボックス機能（メニュー4用）
-        function openLightbox4(event, img) {
-            event.preventDefault();
-            console.log('openLightbox4 called');
-            const lightbox = document.getElementById('lightbox4');
-            console.log('lightbox element:', lightbox);
-            const lightboxImg = document.getElementById('lightbox-img4');
-            console.log('lightboxImg element:', lightboxImg);
-            lightboxImg.src = img.src;
-            lightbox.classList.add('show');
-            console.log('Added show class. Classes:', lightbox.className);
-            document.body.classList.add('lightbox-open');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox4() {
-            const lightbox = document.getElementById('lightbox4');
-            lightbox.classList.remove('show');
-            document.body.classList.remove('lightbox-open');
-            document.body.style.overflow = 'auto';
-        }
-
         // ESCキーで閉じる
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 closeLightbox();
-                closeLightbox4();
             }
         });
     </script>
