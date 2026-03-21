@@ -1,0 +1,134 @@
+/**
+ * SimpleLightbox
+ * Original author: André Rinas
+ * Version: 2.14.0
+ */
+@charset "UTF-8";
+
+.slbOverlay,
+.slbWrapOuter,
+.slbWrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.slbOverlay {
+  overflow: hidden;
+  z-index: 2000;
+  background-color: #000;
+  opacity: 0.7;
+  animation: slbFade 0.5s;
+  animation-timing-function: ease;
+}
+
+@keyframes slbFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+
+.slbWrapOuter {
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 2001;
+}
+
+.slbWrap {
+  position: absolute;
+  text-align: center;
+}
+
+.slbWrap:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.slbContentOuter {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0px auto;
+  padding: 0 1em;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.slbContentOuter .slbContent {
+  position: relative;
+}
+
+.slbContent {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.slbContent img {
+  max-width: 100%;
+  max-height: 100vh;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.slbNav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -25px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.slbNav span {
+  display: none;
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  font-size: 40px;
+  line-height: 40px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.slbNavPrev {
+  left: 0;
+}
+
+.slbNavNext {
+  right: 0;
+}
+
+.slbClose {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  line-height: 40px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  z-index: 2002;
+}
+
+.slbCaption {
+  display: block;
+  margin-top: 1em;
+  color: #fff;
+  text-align: center;
+  font-size: 1em;
+}
