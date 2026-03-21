@@ -93,11 +93,6 @@
             lightbox.classList.add('show');
             document.body.classList.add('lightbox-open');
             document.body.style.overflow = 'hidden';
-
-            // ライトボックスのアニメーション完了後にスクロールをリセット
-            setTimeout(() => {
-                lightbox.scrollTop = 0;
-            }, 100);
         }
 
         function closeLightbox() {
