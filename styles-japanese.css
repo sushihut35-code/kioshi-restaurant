@@ -1120,6 +1120,24 @@ section {
     box-shadow: 0 8px 30px rgba(45, 45, 45, 0.3);
 }
 
+/* メニュー画像（大サイズ） */
+.menu-images-large {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.menu-large-image {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin: 0 auto 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 25px rgba(45, 45, 45, 0.15);
+    border: 2px solid var(--accent-gold);
+}
+
 /* メニュー画像コンテナ */
 .menu-images-container {
     display: flex;
