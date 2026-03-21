@@ -799,6 +799,22 @@ section {
     width: 100%;
 }
 
+/* メニュー画像用リンク */
+.menu-images-container .menu-link {
+    display: inline-block;
+    text-decoration: none;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.menu-images-container .menu-link:hover {
+    transform: scale(1.05);
+}
+
+.menu-images-container .menu-link:hover .menu-table-image {
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
 .back-link {
     margin-top: 40px;
     text-align: center;
