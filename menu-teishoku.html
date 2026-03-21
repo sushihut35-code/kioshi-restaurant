@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>定食メニュー | 旬食工房きよし</title>
     <meta name="description" content="旬食工房きよしの定食メニュー一覧。ご飯、味噌汁、おかずがついたお得な定食をご用意しています。">
-    <link rel="stylesheet" href="styles-japanese.css?v=57">
+    <link rel="stylesheet" href="styles-japanese.css?v=58">
     <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -101,15 +101,21 @@
             document.body.classList.add('lightbox-open');
             document.body.style.overflow = 'hidden';
 
-            console.log('lightbox classes after add:', lightbox.className);
-            console.log('lightbox computed style display:', window.getComputedStyle(lightbox).display);
-            console.log('lightboxImg loaded:', lightboxImg.complete);
-
             setTimeout(() => {
-                console.log('lightboxImg naturalWidth:', lightboxImg.naturalWidth);
-                console.log('lightboxImg naturalHeight:', lightboxImg.naturalHeight);
-                console.log('lightboxImg width:', lightboxImg.width);
-                console.log('lightboxImg height:', lightboxImg.height);
+                const lightboxStyle = window.getComputedStyle(lightbox);
+                console.log('=== LIGHTBOX DEBUG ===');
+                console.log('display:', lightboxStyle.display);
+                console.log('position:', lightboxStyle.position);
+                console.log('z-index:', lightboxStyle.zIndex);
+                console.log('left:', lightboxStyle.left);
+                console.log('top:', lightboxStyle.top);
+                console.log('width:', lightboxStyle.width);
+                console.log('height:', lightboxStyle.height);
+                console.log('backgroundColor:', lightboxStyle.backgroundColor);
+                console.log('visibility:', lightboxStyle.visibility);
+                console.log('opacity:', lightboxStyle.opacity);
+                console.log('offsetParent:', lightbox.offsetParent);
+                console.log('====================');
             }, 100);
         }
 
