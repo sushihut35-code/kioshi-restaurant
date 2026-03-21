@@ -1170,7 +1170,7 @@ body.lightbox-open .header {
 
 /* メニュー4用ライトボックス */
 #lightbox4 {
-    padding: 20px !important;
+    padding: 100px 20px 20px 20px !important;
 }
 
 #lightbox4.show {
