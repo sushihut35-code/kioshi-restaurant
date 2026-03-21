@@ -1102,7 +1102,7 @@ section {
 }
 
 .menu-table-image {
-    max-width: 100%;
+    width: 340px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 6px 25px rgba(45, 45, 45, 0.2);
@@ -1112,6 +1112,12 @@ section {
     image-rendering: auto;
     image-rendering: -webkit-optimize-contrast;
     quality: high;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-table-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(45, 45, 45, 0.3);
 }
 
 /* メニュー画像コンテナ */
