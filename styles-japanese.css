@@ -1153,7 +1153,7 @@ section {
     overflow-x: hidden;
     background-color: rgba(0, 0, 0, 0.95);
     animation: fadeIn 0.3s ease;
-    padding: 150px 20px 250px 20px;
+    padding: 20px;
     box-sizing: border-box;
     -webkit-overflow-scrolling: touch;
 }
@@ -1164,13 +1164,16 @@ body.lightbox-open .header {
 }
 
 .lightbox.show {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .lightbox-content {
     display: block;
     max-width: 95%;
-    max-height: none;
+    max-height: 90vh;
     width: auto;
     height: auto;
     object-fit: contain;
@@ -1179,7 +1182,6 @@ body.lightbox-open .header {
     border-radius: 8px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     animation: zoomIn 0.3s ease;
-    margin: 0 auto 150px auto;
 }
 
 .lightbox-close {
