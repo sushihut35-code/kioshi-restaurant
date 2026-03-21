@@ -1168,6 +1168,15 @@ body.lightbox-open .header {
     display: block;
 }
 
+/* メニュー4用ライトボックス */
+#lightbox4 {
+    padding: 20px !important;
+}
+
+#lightbox4.show {
+    display: block;
+}
+
 .lightbox-content {
     display: inline-block;
     max-width: 95%;
