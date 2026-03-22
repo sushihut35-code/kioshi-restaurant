@@ -980,6 +980,12 @@ section {
     border-bottom: 2px solid rgba(184, 134, 11, 0.2);
 }
 
+.kaiseki-menu .item-name-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .kaiseki-menu .item-name {
     font-size: 1.8rem;
     font-weight: 700;
