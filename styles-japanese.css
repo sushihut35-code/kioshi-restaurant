@@ -1138,6 +1138,13 @@ section {
     border: 2px solid var(--accent-gold);
 }
 
+/* スマホ対応 */
+@media (max-width: 768px) {
+    .menu-large-image {
+        max-width: 100%;
+    }
+}
+
 /* メニュー画像コンテナ */
 .menu-images-container {
     display: flex;
