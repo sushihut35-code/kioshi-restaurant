@@ -957,46 +957,86 @@ section {
 .kaiseki-menu .menu-item {
     background: var(--white);
     padding: 35px 30px;
-    margin-bottom: 25px;
-    border-radius: 8px;
+    margin-bottom: 30px;
+    border-radius: 10px;
     box-shadow: var(--shadow);
-    border-left: 4px solid var(--accent-red);
+    border-top: 5px solid var(--accent-red);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .kaiseki-menu .menu-item:hover {
-    transform: translateX(10px);
-    box-shadow: 0 8px 30px rgba(45, 45, 45, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(45, 45, 45, 0.25);
 }
 
 .kaiseki-menu .menu-item-name {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(184, 134, 11, 0.2);
 }
 
 .kaiseki-menu .item-name {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: var(--accent-brown);
     font-family: 'Zen Old Mincho', serif;
 }
 
-.kaiseki-menu .item-price {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--accent-red);
+.kaiseki-menu .item-count {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    background: rgba(212, 175, 55, 0.15);
+    padding: 5px 15px;
+    border-radius: 20px;
 }
 
-.kaiseki-menu .menu-item-desc {
-    color: var(--text-secondary);
-    font-size: 1rem;
-    line-height: 1.9;
-    padding-left: 20px;
-    border-left: 3px solid var(--accent-gold);
+.kaiseki-menu .item-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-red);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.kaiseki-menu .menu-items-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.kaiseki-menu .menu-items-list li {
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    background: rgba(245, 245, 220, 0.3);
+    border-radius: 5px;
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.kaiseki-menu .menu-items-list li::before {
+    content: '▶';
+    color: var(--accent-gold);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+.kaiseki-menu .menu-items-list li.highlight {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(212, 175, 55, 0.1) 100%);
+    border-left: 4px solid var(--accent-gold);
+    font-weight: 600;
+}
+
+.kaiseki-menu .menu-items-list li.highlight::before {
+    content: '★';
+    color: var(--accent-gold);
 }
 
 .menu-link {
