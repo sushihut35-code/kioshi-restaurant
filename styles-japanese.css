@@ -1007,7 +1007,7 @@ section {
 }
 
 .kaiseki-menu .item-price {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     font-weight: 600;
     color: var(--accent-red);
 }
@@ -1027,7 +1027,7 @@ section {
     }
 
     .kaiseki-menu .item-price {
-        font-size: 0.65rem;
+        font-size: 0.55rem;
     }
 
     .kaiseki-menu .item-count {
