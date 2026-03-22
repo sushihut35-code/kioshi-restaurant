@@ -972,10 +972,10 @@ section {
 .kaiseki-menu .menu-item-name {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 20px;
     flex-wrap: nowrap;
-    gap: 15px;
+    gap: 20px;
     padding-bottom: 15px;
     border-bottom: 2px solid rgba(184, 134, 11, 0.2);
 }
@@ -985,16 +985,6 @@ section {
     font-weight: 700;
     color: var(--accent-brown);
     font-family: 'Zen Old Mincho', serif;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.kaiseki-menu .menu-item-name > div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 8px;
 }
 
 .kaiseki-menu .item-count {
@@ -1007,7 +997,7 @@ section {
 }
 
 .kaiseki-menu .item-price {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: var(--accent-red);
 }
@@ -1015,24 +1005,25 @@ section {
 /* スマホ向けの会席メニューレイアウト調整 */
 @media (max-width: 768px) {
     .kaiseki-menu .menu-item-name {
-        flex-wrap: nowrap;
-        align-items: flex-start;
+        flex-wrap: wrap;
         gap: 10px;
     }
 
     .kaiseki-menu .item-name {
-        font-size: 1.3rem;
-        flex-wrap: nowrap;
-        gap: 15px;
-    }
-
-    .kaiseki-menu .item-price {
-        font-size: 0.55rem;
+        font-size: 1.4rem;
+        flex: 0 0 auto;
     }
 
     .kaiseki-menu .item-count {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
         padding: 5px 12px;
+    }
+
+    .kaiseki-menu .item-price {
+        font-size: 0.85rem;
+        width: 100%;
+        text-align: left;
+        padding-top: 5px;
     }
 }
 
