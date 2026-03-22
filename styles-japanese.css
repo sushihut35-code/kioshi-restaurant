@@ -933,6 +933,72 @@ section {
     border-bottom: 2px solid var(--accent-gold);
 }
 
+/* 会席料理用スタイル */
+.menu-description-text {
+    margin-bottom: 40px;
+}
+
+.menu-intro {
+    font-size: 1.05rem;
+    line-height: 2;
+    text-align: center;
+    color: var(--text-primary);
+    padding: 30px;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--accent-gold);
+}
+
+.kaiseki-menu {
+    margin: 40px 0;
+}
+
+.kaiseki-menu .menu-item {
+    background: var(--white);
+    padding: 35px 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--accent-red);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kaiseki-menu .menu-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 8px 30px rgba(45, 45, 45, 0.2);
+}
+
+.kaiseki-menu .menu-item-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.kaiseki-menu .item-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-brown);
+    font-family: 'Zen Old Mincho', serif;
+}
+
+.kaiseki-menu .item-price {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent-red);
+}
+
+.kaiseki-menu .menu-item-desc {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.9;
+    padding-left: 20px;
+    border-left: 3px solid var(--accent-gold);
+}
+
 .menu-link {
     color: var(--accent-brown);
     text-decoration: none;
