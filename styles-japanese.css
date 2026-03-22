@@ -7,6 +7,34 @@
     box-sizing: border-box;
 }
 
+/* アクセシビリティ：フォーカススタイル */
+*:focus-visible {
+    outline: 3px solid var(--accent-gold);
+    outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--accent-gold);
+    outline-offset: 4px;
+}
+
+/* スキップリンク（キーボードユーザー用） */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--accent-brown);
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    z-index: 10000;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 :root {
     /* 和風・伝統的な色 */
     --bg-color: #F5F5DC; /* 生成り色 */
@@ -32,6 +60,18 @@ body {
     letter-spacing: 0.05em;
     margin: 0;
     padding: 0;
+    animation: pageLoad 0.8s ease;
+}
+
+@keyframes pageLoad {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .container {
@@ -172,6 +212,9 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 .hero-overlay {
@@ -338,6 +381,105 @@ section {
 }
 
 /* ===================================
+   Seasonal Section
+   =================================== */
+.seasonal {
+    background: linear-gradient(135deg, rgba(255, 182, 193, 0.1) 0%, rgba(144, 238, 144, 0.1) 100%);
+}
+
+.seasonal-vertical {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.seasonal-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.seasonal-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.seasonal-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.seasonal-title {
+    font-size: 1.8rem;
+    color: var(--accent-brown);
+    margin-bottom: 15px;
+    font-family: 'Zen Old Mincho', serif;
+}
+
+.seasonal-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.seasonal-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.seasonal-item {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--accent-gold);
+}
+
+.seasonal-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 35px rgba(45, 45, 45, 0.2);
+}
+
+.seasonal-item-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.seasonal-item-name {
+    font-size: 1.2rem;
+    color: var(--accent-brown);
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-family: 'Zen Old Mincho', serif;
+}
+
+.seasonal-item-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.seasonal-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-style: italic;
+}
+
+/* ===================================
    Concept Section
    =================================== */
 .concept-content {
@@ -488,6 +630,13 @@ section {
     gap: 20px;
     padding: 20px 0;
     border-bottom: 1px solid rgba(184, 134, 11, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateX(10px);
+    background: rgba(212, 175, 55, 0.05);
+    padding-left: 15px;
 }
 
 .timeline-item:last-child {
@@ -617,12 +766,24 @@ section {
     padding: 10px;
     border-radius: 5px;
     box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 35px rgba(45, 45, 45, 0.25);
 }
 
 .gallery-item img {
     width: 100%;
     border-radius: 3px;
     display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
 }
 
 /* ===================================
@@ -881,6 +1042,7 @@ section {
 
 .menu-link:hover {
     color: var(--accent-red);
+    transform: translateX(5px);
 }
 
 .menu-link::after {
@@ -1036,6 +1198,11 @@ section {
 
     .hamburger {
         display: flex;
+    }
+
+    /* スマホではパララックスを無効化 */
+    .hero-background {
+        background-attachment: scroll;
     }
 
     .nav {
@@ -1205,25 +1372,69 @@ section {
     font-size: 1.1rem;
 }
 
-.instagram-embed-placeholder {
-    margin-top: 30px;
-    padding: 40px 20px;
-    background: var(--bg-color);
-    border: 2px dashed var(--accent-gold);
-    border-radius: 8px;
-    text-align: center;
+.instagram-preview {
+    margin-top: 40px;
 }
 
-.placeholder-text {
-    font-size: 1.2rem;
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.instagram-mockup {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #dbdbdb;
+}
+
+.instagram-mockup:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.mockup-image {
+    background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.mockup-caption {
+    padding: 12px 15px 8px;
+    font-size: 0.9rem;
     color: var(--text-primary);
     font-weight: 600;
-    margin-bottom: 10px;
 }
 
-.placeholder-note {
+.mockup-meta {
+    padding: 0 15px 12px;
+    font-size: 0.8rem;
     color: var(--text-secondary);
-    font-size: 0.95rem;
+}
+
+.instagram-cta {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--accent-brown);
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.instagram-cta a {
+    color: var(--accent-red);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.instagram-cta a:hover {
+    color: var(--accent-gold);
 }
 
 /* ===================================
@@ -1263,19 +1474,20 @@ section {
 /* メニュー画像（大サイズ） */
 .menu-images-large {
     width: 100%;
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .menu-large-image {
     width: 100%;
-    max-width: 900px;
+    max-width: 800px;
     height: auto;
     display: block;
     margin: 0 auto 30px auto;
     border-radius: 8px;
     box-shadow: 0 6px 25px rgba(45, 45, 45, 0.15);
     border: 2px solid var(--accent-gold);
+    loading: lazy;
 }
 
 /* スマホ対応 */

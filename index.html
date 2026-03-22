@@ -6,10 +6,13 @@
     <title>旬食工房きよし | 46年の進化 - 宮崎県門川町</title>
     <meta name="description" content="食事処きよしとして創業、回転寿司きよしを経て、2017年に旬食工房きよしとして門川に移転。46年の歴史と進化を続けています。">
     <meta name="keywords" content="旬食工房きよし, 回転寿司きよし, 食事処きよし, チキン南蛮, 門川町, 延岡, 宮崎, 46年の歴史">
-    <link rel="stylesheet" href="styles-japanese.css?v=70">
+    <link rel="stylesheet" href="styles-japanese.css?v=71">
     <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- スキップリンク（アクセシビリティ） -->
+    <a href="#main-content" class="skip-link">本文へスキップ</a>
+
     <!-- Header -->
     <header class="header">
         <h1 class="site-title">旬食工房きよし</h1>
@@ -21,6 +24,7 @@
         <nav class="nav" id="nav">
             <a href="#news" class="nav-link">お知らせ</a>
             <a href="#concept" class="nav-link">想い</a>
+            <a href="#seasonal" class="nav-link">今の旬</a>
             <a href="#menu" class="nav-link">メニュー</a>
             <a href="#history" class="nav-link">歴史</a>
             <a href="#reviews" class="nav-link">お客様の声</a>
@@ -58,29 +62,66 @@
                 <span class="instagram-icon">📷</span>
                 <span class="instagram-text">@syunsyokukouboukiyoshi をフォローする</span>
             </a>
-            <div class="instagram-embed-placeholder">
-                <p class="placeholder-text">最新のメニュー情報やお知らせを随時更新中！</p>
-                <p class="placeholder-note">
-                    Instagramで日々の活動やメニューをお届けしております
+
+            <!-- Instagram プレビュー -->
+            <div class="instagram-preview">
+                <div class="instagram-grid">
+                    <div class="instagram-mockup">
+                        <div class="mockup-image">🍽️</div>
+                        <div class="mockup-caption">今日のランチ定食</div>
+                        <div class="mockup-meta">2時間前 • いいね48件</div>
+                    </div>
+                    <div class="instagram-mockup">
+                        <div class="mockup-image">🍗</div>
+                        <div class="mockup-caption">看板メニューのチキン南蛮</div>
+                        <div class="mockup-meta">5時間前 • いいね76件</div>
+                    </div>
+                    <div class="instagram-mockup">
+                        <div class="mockup-image">🌸</div>
+                        <div class="mockup-caption">春の食材を使ったメニュー</div>
+                        <div class="mockup-meta">1日前 • いいね92件</div>
+                    </div>
+                </div>
+                <p class="instagram-cta">
+                    Instagramでもっと見る →
                 </p>
             </div>
         </div>
     </section>
 
-    <div class="container">
-            <div class="hero-background">
-                <div class="hero-overlay"></div>
+    <div class="container" id="main-content">
+        <!-- Seasonal Section -->
+        <section id="seasonal" class="seasonal">
+            <div class="seasonal-vertical">
+                <h3 class="section-title">今の旬</h3>
             </div>
-            <div class="hero-content">
-                <div class="hero-text">
-                    <p class="hero-year">昭和55年創業</p>
-                    <h2 class="hero-title"><span id="years-since-founded">46</span>年の進化を胸に<br>変わらぬ想いを</h2>
-                    <p class="hero-subtitle">食事処から、回転寿司を経て、旬食工房へ</p>
+            <div class="seasonal-content">
+                <div class="seasonal-header">
+                    <div class="seasonal-icon">🌸</div>
+                    <h4 class="seasonal-title">春の食材をお届け</h4>
+                    <p class="seasonal-subtitle">旬食工房きよしは、四季折々の味わいを大切にしています</p>
                 </div>
-            </div>
-            <div class="hero-scroll">
-                <span class="scroll-text">SCROLL</span>
-                <span class="scroll-line"></span>
+                <div class="seasonal-items">
+                    <div class="seasonal-item">
+                        <div class="seasonal-item-icon">🥬</div>
+                        <h5 class="seasonal-item-name">春キャベツ</h5>
+                        <p class="seasonal-item-desc">甘みが増して柔らかくなった春キャベツを、サラダや炒め物で</p>
+                    </div>
+                    <div class="seasonal-item">
+                        <div class="seasonal-item-icon">🐟</div>
+                        <h5 class="seasonal-item-name">春の魚介類</h5>
+                        <p class="seasonal-item-desc">旬を迎える魚介類を、新鮮なままお届け</p>
+                    </div>
+                    <div class="seasonal-item">
+                        <div class="seasonal-item-icon">🍓</div>
+                        <h5 class="seasonal-item-name">苺</h5>
+                        <p class="seasonal-item-desc">地元の苺を使った、甘さ控えめのデザート</p>
+                    </div>
+                </div>
+                <p class="seasonal-note">
+                    ※ 季節によってご用意できる食材は異なります。<br>
+                    詳しくは店頭またはInstagramでご確認ください
+                </p>
             </div>
         </section>
 
