@@ -1007,14 +1007,9 @@ section {
 }
 
 .kaiseki-menu .item-price {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: white;
-    background: var(--accent-red);
-    padding: 8px 18px;
-    border-radius: 20px;
-    box-shadow: 0 2px 8px rgba(192, 57, 43, 0.3);
-    white-space: nowrap;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--accent-red);
 }
 
 /* スマホ向けの会席メニューレイアウト調整 */
@@ -1032,9 +1027,7 @@ section {
     }
 
     .kaiseki-menu .item-price {
-        font-size: 0.75rem;
-        padding: 6px 14px;
-        white-space: nowrap;
+        font-size: 0.65rem;
     }
 
     .kaiseki-menu .item-count {
