@@ -987,7 +987,7 @@ section {
     font-family: 'Zen Old Mincho', serif;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .kaiseki-menu .menu-item-name > div {
