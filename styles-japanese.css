@@ -974,7 +974,7 @@ section {
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 20px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 15px;
     padding-bottom: 15px;
     border-bottom: 2px solid rgba(184, 134, 11, 0.2);
@@ -1007,7 +1007,7 @@ section {
 }
 
 .kaiseki-menu .item-price {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--accent-red);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
@@ -1027,7 +1027,7 @@ section {
     }
 
     .kaiseki-menu .item-price {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         align-self: flex-start;
     }
 
