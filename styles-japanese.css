@@ -972,7 +972,7 @@ section {
 .kaiseki-menu .menu-item-name {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 20px;
     flex-wrap: wrap;
     gap: 15px;
@@ -985,6 +985,9 @@ section {
     font-weight: 700;
     color: var(--accent-brown);
     font-family: 'Zen Old Mincho', serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .kaiseki-menu .menu-item-name > div {
@@ -1018,17 +1021,14 @@ section {
         gap: 12px;
     }
 
-    .kaiseki-menu .menu-item-name > div {
-        align-items: flex-start;
-        gap: 4px;
-    }
-
     .kaiseki-menu .item-name {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+        flex-wrap: wrap;
     }
 
     .kaiseki-menu .item-price {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+        align-self: flex-start;
     }
 
     .kaiseki-menu .item-count {
