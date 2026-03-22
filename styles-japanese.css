@@ -1007,10 +1007,40 @@ section {
 }
 
 .kaiseki-menu .item-price {
-    font-size: 1.1rem;
+    font-size: 0.85rem;
     font-weight: 700;
-    color: var(--accent-red);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    color: white;
+    background: var(--accent-red);
+    padding: 8px 18px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(192, 57, 43, 0.3);
+    white-space: nowrap;
+}
+
+/* スマホ向けの会席メニューレイアウト調整 */
+@media (max-width: 768px) {
+    .kaiseki-menu .menu-item-name {
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .kaiseki-menu .item-name {
+        font-size: 1.3rem;
+        flex-wrap: nowrap;
+        gap: 15px;
+    }
+
+    .kaiseki-menu .item-price {
+        font-size: 0.75rem;
+        padding: 6px 14px;
+        white-space: nowrap;
+    }
+
+    .kaiseki-menu .item-count {
+        font-size: 0.8rem;
+        padding: 5px 12px;
+    }
 }
 
 /* スマホ向けの会席メニューレイアウト調整 */
