@@ -1010,6 +1010,31 @@ section {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+/* スマホ向けの会席メニューレイアウト調整 */
+@media (max-width: 768px) {
+    .kaiseki-menu .menu-item-name {
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+
+    .kaiseki-menu .item-name {
+        font-size: 1.3rem;
+    }
+
+    .kaiseki-menu .item-price {
+        font-size: 1.2rem;
+    }
+
+    .kaiseki-menu .item-count {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+    }
+
+    .kaiseki-menu .menu-item-name > div {
+        gap: 5px;
+    }
+}
+
 .kaiseki-menu .menu-items-list {
     list-style: none;
     padding: 0;
