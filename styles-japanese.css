@@ -1445,11 +1445,13 @@ section {
 .instagram-cta a {
     color: var(--accent-red);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
 }
 
 .instagram-cta a:hover {
     color: var(--accent-gold);
+    transform: translateX(5px);
 }
 
 /* ===================================
