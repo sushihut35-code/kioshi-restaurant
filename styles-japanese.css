@@ -1005,13 +1005,13 @@ section {
 /* スマホ向けの会席メニューレイアウト調整 */
 @media (max-width: 768px) {
     .kaiseki-menu .menu-item-name {
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
         gap: 10px;
     }
 
     .kaiseki-menu .item-name {
         font-size: 1.4rem;
-        flex: 0 0 auto;
     }
 
     .kaiseki-menu .item-count {
@@ -1021,8 +1021,7 @@ section {
 
     .kaiseki-menu .item-price {
         font-size: 0.85rem;
-        width: 100%;
-        text-align: left;
+        align-self: flex-start;
         padding-top: 5px;
     }
 }
