@@ -1020,7 +1020,7 @@ section {
 
     .kaiseki-menu .menu-item-name > div {
         align-items: flex-start;
-        gap: 8px;
+        gap: 4px;
     }
 
     .kaiseki-menu .item-name {
