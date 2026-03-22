@@ -1399,6 +1399,12 @@ section {
     border: 1px solid #dbdbdb;
 }
 
+.instagram-mockup[href] {
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+}
+
 .instagram-mockup:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
