@@ -1016,24 +1016,25 @@ section {
 /* スマホ向けの会席メニューレイアウト調整 */
 @media (max-width: 768px) {
     .kaiseki-menu .menu-item-name {
-        flex-direction: column;
+        flex-wrap: nowrap;
         align-items: flex-start;
-        gap: 12px;
+        gap: 10px;
     }
 
     .kaiseki-menu .item-name {
-        font-size: 1.3rem;
-        flex-wrap: wrap;
+        font-size: 1.1rem;
+        flex-wrap: nowrap;
+        gap: 10px;
     }
 
     .kaiseki-menu .item-price {
-        font-size: 1.2rem;
-        align-self: flex-start;
+        font-size: 1.0rem;
+        white-space: nowrap;
     }
 
     .kaiseki-menu .item-count {
-        font-size: 0.85rem;
-        padding: 5px 12px;
+        font-size: 0.75rem;
+        padding: 4px 10px;
     }
 }
 
