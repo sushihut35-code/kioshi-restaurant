@@ -98,7 +98,7 @@ const yearsSinceMoved = currentYear - movedYear;
 
 // Convert to Arabic numbers (just return the number as is)
 const arabicNumber = (num) => {
-    return num + '年';
+    return num;
 };
 
 // Arabic numbers for years
