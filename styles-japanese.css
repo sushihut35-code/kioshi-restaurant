@@ -44,6 +44,7 @@ button:focus-visible {
     --accent-brown: #8B4513; /* 金茶 */
     --accent-gold: #D4AF37; /* 金色 */
     --border-color: #B8860B;
+    --white: #FFFFFF;
     --shadow: 0 4px 20px rgba(45, 45, 45, 0.1);
 }
 
