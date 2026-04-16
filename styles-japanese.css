@@ -1377,6 +1377,12 @@ section {
     transform: translateY(0);
 }
 
+/* メニューページのセクションは常に表示（フェードインで隠れないように） */
+.menu-section.fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
 /* ===================================
    Instagram Section
    =================================== */
